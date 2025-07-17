@@ -2,23 +2,6 @@
 
 A car auction website consisting of 3 pages. The home page displays user information and participating auctions. The second page displays the available auctions. The third page displays the auction, the type of vehicle, and how to enter the auction.
 
----
-
-## Project Structure
-
-src/
-├── app/
-│ ├── pages/
-│ │ └── dashboard/
-│ │ ├── home-page/
-│ │ ├── info-page/
-│ │ └── mazadat-page/
-│ ├── components/
-│ └── └── bottom-nav/
-      └── header/
-      └── side-nav/
-
-
 ## Features
 - Countdown timer for Auction 
 - Purchase confirmation dialog
