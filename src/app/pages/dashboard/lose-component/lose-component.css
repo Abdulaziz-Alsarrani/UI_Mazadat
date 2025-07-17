@@ -1,0 +1,38 @@
+.not-buy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.thank-card {
+  width: 80%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.thank-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+.thank-card h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #c00;
+}
+
+.thank-card p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}

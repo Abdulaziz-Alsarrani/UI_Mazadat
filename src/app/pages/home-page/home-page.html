@@ -1,0 +1,135 @@
+<div class="home-page" dir="rtl">
+    <div class="header-row">
+        <p class="page-title">الرئيسة</p>
+        <button class="create-button">إنشاء مزاد جديد</button>
+    </div>
+
+    <div class="banner">
+        <img src="https://www.wsupercars.com/wallpapers-regular/Aston-Martin/2026-Aston-Martin-Vantage-S-001-2160.jpg" alt="Dashboard Banner" />
+    </div>
+
+    <!-- Stats Row -->
+    <div class="stats-row">
+        <div class="stat-card">
+            <img src="https://img.icons8.com/?size=100&id=2112&format=png" class="card-icon" />
+            <div class="card-info">
+                <h3>15</h3>
+                <p>مزادات مشارك بها</p>
+            </div>
+            <img src="https://img.icons8.com/?size=100&id=35352&format=png" class="stat-change-icon" />
+        </div>
+
+        <div class="stat-card">
+            <img src="https://img.icons8.com/?size=128&id=2koI9uU0dBK7&format=png" class="card-icon" />
+            <div class="card-info">
+                <h3>32</h3>
+                <p>مزادات فائز بها</p>
+            </div>
+            <img src="https://img.icons8.com/?size=100&id=35332&format=png" class="stat-change-icon" />
+        </div>
+    </div>
+
+    <!-- المهام -->
+    <div class="section-title">المهام</div>
+
+    <div class="tasks-row">
+        <div class="task-card">
+            <img src="https://img.icons8.com/?size=60&id=RhkKQFp4TrwF&format=png" class="card-icon" />
+            <div class="card-info">
+                <h3>4 مركبات بانتظار الدفع</h3>
+                <p >نحن في انتظار عملية الدفع</p>
+            </div>
+            <p class="task-action">اتخاذ اجراء</p>
+        </div>
+
+        <div class="task-card">
+            <img src="https://img.icons8.com/?size=100&id=6552&format=png" class="card-icon" />
+            <div class="card-info">
+                <h3>4 مستحقات بانتظار الدفع</h3>
+                <p>مستندات تحتاج الى مراجعتك</p>
+            </div>
+           <p class="task-action">اتخاذ اجراء</p>
+        </div>
+
+        <div class="task-card">
+            <img src="https://img.icons8.com/?size=100&id=12666&format=png" class="card-icon" />
+            <div class="card-info">
+                <h3>4 مركبات بانتظار نقل الملكية</h3>
+                <p>مستندات تحتاج الى مراجعتك</p>
+            </div>
+           <p class="task-action">اتخاذ اجراء</p>
+        </div>
+    </div>
+
+    <div class="orders-bar">
+        <h3>مزداتي</h3>
+        <a href="#">عرض الكل</a>
+    </div>
+
+    <!-- Tabs -->
+    <div class="record-tabs">
+        <button class="tab-button" [class.active]="selectedTab === 'مستمر'"
+            (click)="selectedTab = 'مستمر'">مشارك بها</button>
+
+        <button class="tab-button" [class.active]="selectedTab === 'منتهي'"
+            (click)="selectedTab = 'منتهي'">فائز بها</button>
+    </div>
+
+    <!-- Table -->
+    <div class="records-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>رقم المزاد</th>
+                    <th>رقم الهيكل</th>
+                    <th>اللوحة</th>
+                    <th>اعلان المزاد</th>
+                    <th>اقامة المزاد</th>
+                    <th>الحالة</th>
+                    <th>الإجراءات</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- مستمر -->
+                <tr [hidden]="selectedTab !== 'مستمر'">
+                    <td>44403442</td>
+                    <td>kg552777</td>
+                    <td>2213 ر ح س</td>
+                    <td>2025-07-1</td>
+                    <td>2025-07-12</td>
+                    <td>نشط</td>
+                    <td><button class="action-btn">...</button></td>
+                </tr>
+                <tr [hidden]="selectedTab !== 'مستمر'">
+                     <td>43303442</td>
+                    <td>kg553377</td>
+                    <td>2333 ر ح س</td>
+                    <td>2025-07-1</td>
+                    <td>2025-07-12</td>
+                    <td>نشط</td>
+                    <td><button class="action-btn">...</button></td>
+                </tr>
+
+                <!-- منتهي -->
+                <tr [hidden]="selectedTab !== 'منتهي'">
+                     <td>42203442</td>
+                    <td>kg2212777</td>
+                    <td>2313 ر ح س</td>
+                    <td>2025-07-1</td>
+                    <td>2025-07-12</td>
+                    <td>نشط</td>
+                    <td><button class="action-btn">...</button></td>
+                </tr>
+                <tr [hidden]="selectedTab !== 'منتهي'">
+                     <td>44403442</td>
+                    <td>kg552777</td>
+                    <td>2213 ر ح س</td>
+                    <td>2025-07-1</td>
+                    <td>2025-07-12</td>
+                    <td>نشط</td>
+                    <td><button class="action-btn">...</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

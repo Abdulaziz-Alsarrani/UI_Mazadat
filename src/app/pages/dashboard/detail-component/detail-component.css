@@ -1,0 +1,196 @@
+.page {
+  padding: 32px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  font-family: inherit;
+}
+
+.info-card {
+  background-color: white;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.info-card h3 {
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+}
+
+.info-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.info-card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+/* Info Card Grid  */
+.info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.info-grid .info-card {
+  flex: 0 0 calc(33.333% - 10.66px);
+}
+
+
+/* Steps Section */
+.steps-title {
+  margin: 32px 0 16px;
+  text-align: right;
+}
+
+.stats-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.stat-card {
+  flex: 0 0 150px;
+  background-color: white;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  min-width: 150px;
+}
+
+.step-icon {
+  display: inline-block;
+  background-color: #49698C;
+  color: white;
+  font-weight: bold;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+/* ======================
+   Unified Table Styles
+====================== */
+.base-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  text-align: right;
+  font-family: inherit;
+}
+
+.base-table thead th.table-heading {
+  background-color: #49698c;
+  color: white;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+}
+
+.base-table th,
+.base-table td {
+  padding: 16px;
+  font-weight: normal;
+  border: none;
+}
+
+.base-table h4 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.base-table p {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+/* Card inside table cell */
+.info-card-vertical {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-header {
+  background-color: #f0f0f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.card-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.card-header h5 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #444;
+  text-align: right;
+  margin: 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer p {
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+}
+
+.card-footer h5 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.card-button {
+  align-self: center;
+  padding: 8px 24px;
+  font-size: 14px;
+  background-color: #49698C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

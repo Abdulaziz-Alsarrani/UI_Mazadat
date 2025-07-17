@@ -1,0 +1,23 @@
+<div class="slider-container">
+  <div class="slider-box">
+    <div class="image-header">
+      <button (click)="favorite()">
+        <img class="icon" src="https://img.icons8.com/?size=60&id=64767&format=png" alt="Favorite" />
+      </button>
+      <button (click)="share()">
+        <img class="icon" src="https://img.icons8.com/?size=48&id=TDCU7KRViM2Q&format=png" alt="Share" />
+      </button>
+    </div>
+
+    <img [src]="currentImage" class="main-image" (click)="openModal(currentImage)" />
+
+    <!-- Arrows -->
+    <button class="nav left" (click)="prevImage()" [disabled]="currentIndex === 0">&#10094;</button>
+    <button class="nav right" (click)="nextImage()" [disabled]="currentIndex === images.length - 1">&#10095;</button>
+  </div>
+</div>
+
+<!-- Fullscreen Modal -->
+<div class="modal-backdrop" *ngIf="selectedImage" (click)="closeModal()">
+  <img [src]="selectedImage" class="modal-image" />
+</div>

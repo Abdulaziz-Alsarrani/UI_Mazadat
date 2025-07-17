@@ -1,0 +1,23 @@
+<aside class="side-nav">
+  <!-- Logo -->
+<img src="/images/Mazad.png" alt="Logo" class="logo" />
+
+
+  <!-- Navigation -->
+  <nav class="nav-items">
+    <a class="nav-item" href="#" routerLink="/">الرئيسة</a>
+
+
+    <div class="nav-group">
+      <a class="nav-item" href="#" (click)="toggleDropdown(); $event.preventDefault()">المزادات</a>
+      <div class="dropdown" [class.open]="dropdownOpen">
+        <a class="nav-sub-item" href="#" routerLink="/mazadat-page">استعراض المزادات</a>
+        <a class="nav-sub-item" href="#" >مزاداتي</a>
+      </div>
+    </div>
+
+    <a class="nav-item" href="#">كروت المزايدة</a>
+  </nav>
+
+   <button class="sidebar-bottom-button">الاعدادات</button>
+</aside>

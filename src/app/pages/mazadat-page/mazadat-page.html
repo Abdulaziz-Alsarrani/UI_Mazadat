@@ -1,0 +1,170 @@
+<div class="page" dir="rtl">
+
+    <!-- Banner -->
+    <div class="banner">
+        <img src="https://www.wsupercars.com/wallpapers-regular/Bentley/2025-Bentley-EXP-15-Concept-001-2160.jpg" alt="Banner" />
+    </div>
+
+    <div class="stats-row">
+        <div class="stat-card">
+            <img src="https://img.icons8.com/?size=96&id=63789&format=png" class="card-icon" />
+            <p>BMW</p>
+        </div>
+        <div class="stat-card">
+            <img src="https://img.icons8.com/?size=96&id=57660&format=png" class="card-icon" />
+            <p>Ford</p>
+        </div>
+        <div class="stat-card">
+            <img src="https://img.icons8.com/?size=160&id=vCJbVnk1FbiO&format=png" class="card-icon" />
+            <p>Mercedes</p>
+        </div>
+        <div class="stat-card">
+            <img src="https://img.icons8.com/?size=100&id=58310&format=png" class="card-icon" />
+            <p>Audi</p>
+        </div>
+        <div class="stat-card">
+            <img src="https://img.icons8.com/?size=96&id=58787&format=png" class="card-icon" />
+            <p>Volkswagen</p>
+        </div>
+        <div class="stat-card">
+            <img src="https://img.icons8.com/?size=160&id=s7RKbLT2z7yf&format=png" class="card-icon" />
+            <p>honda</p>
+        </div>
+    </div>
+
+
+    <!-- Tabs -->
+    <div class="record-tabs">
+        <button class="tab-button" [class.active]="selectedTab === 'الكل'" (click)="selectedTab = 'الكل'">الكل</button>
+
+        <button class="tab-button" [class.active]="selectedTab === 'جديد'" (click)="selectedTab = 'جديد'">جديد</button>
+
+        <button class="tab-button" [class.active]="selectedTab === 'مستعمل'"
+            (click)="selectedTab = 'مستعمل'">مستعمل</button>
+    </div>
+
+    <!-- Product Card Grid -->
+    <div class="card-grid">
+
+        <div class="product-card">
+            <a  href="/info-page" routerLink="/info-page">
+            <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?q=80&w=1215&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="product-img" />
+            </a>
+
+            <div class="company-logo">
+                <img src="https://img.icons8.com/?size=96&id=63789&format=png" />
+            </div>
+
+            <div class="info-row">
+                <div class="details">
+                    <h3>اسم المنتج</h3>
+                    <p>الوصف المختصر</p>
+                </div>
+                <button class="heart-button">♡</button>
+            </div>
+
+            <h3 class="price">250000 ريال</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1600268330186-76564be81357?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ym13fGVufDB8fDB8fHww" class="product-img" />
+
+            <div class="company-logo">
+                <img src="https://img.icons8.com/?size=96&id=63789&format=png" />
+            </div>
+
+            <div class="info-row">
+                <div class="details">
+                    <h3>اسم المنتج</h3>
+                    <p>الوصف المختصر</p>
+                </div>
+                <button class="heart-button">♡</button>
+            </div>
+
+            <h3 class="price">250000 ريال</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/flagged/photo-1553505192-acca7d4509be?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Ym13fGVufDB8fDB8fHww" class="product-img" />
+
+            <div class="company-logo">
+                <img src="https://img.icons8.com/?size=96&id=63789&format=png" />
+            </div>
+
+            <div class="info-row">
+                <div class="details">
+                    <h3>اسم المنتج</h3>
+                    <p>الوصف المختصر</p>
+                </div>
+                <button class="heart-button">♡</button>
+            </div>
+
+            <h3 class="price">250000 ريال</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1523983388277-336a66bf9bcd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJtd3xlbnwwfHwwfHx8MA%3D%3D" class="product-img" />
+
+            <div class="company-logo">
+                <img src="https://img.icons8.com/?size=96&id=63789&format=png" />
+            </div>
+
+            <div class="info-row">
+                <div class="details">
+                    <h3>اسم المنتج</h3>
+                    <p>الوصف المختصر</p>
+                </div>
+                <button class="heart-button">♡</button>
+            </div>
+
+            <h3 class="price">250000 ريال</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1619362280026-accdce53f512?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D" class="product-img" />
+
+            <div class="company-logo">
+                <img src="https://img.icons8.com/?size=96&id=63789&format=png" />
+            </div>
+
+            <div class="info-row">
+                <div class="details">
+                    <h3>اسم المنتج</h3>
+                    <p>الوصف المختصر</p>
+                </div>
+                <button class="heart-button">♡</button>
+            </div>
+
+            <h3 class="price">500 ريال</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1523983302122-73e869e1f850?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fGJtd3xlbnwwfHwwfHx8MA%3D%3D" class="product-img" />
+
+            <div class="company-logo">
+                <img src="https://img.icons8.com/?size=96&id=63789&format=png" />
+            </div>
+
+            <div class="info-row">
+                <div class="details">
+                    <h3>اسم المنتج</h3>
+                    <p>الوصف المختصر</p>
+                </div>
+                <button class="heart-button">♡</button>
+            </div>
+
+            <h3 class="price">250000 ريال</h3>
+        </div>
+    </div>
+
+    <div class="pagination" dir="rtl">
+        <span class="page-arrow">&lt;</span> 
+        <span class="page-number">999</span>
+        <span class="page-dots">...</span>
+        <span class="page-number">3</span>
+        <span class="page-number">2</span>
+        <span class="page-number active">1</span>
+        <span class="page-arrow">&gt;</span> 
+    </div>
+
+</div>

@@ -1,0 +1,98 @@
+<div class="info-page" dir="rtl">
+    <app-slider-component></app-slider-component>
+    <div class="banner">
+        <div class="product-header">
+            <h3 class="product-title">2025 BMW Touring</h3>
+            <div class="product-meta">
+                <h3>عبداللطيف جميل</h3>
+                <button class="follow-button" *ngIf="!timerEnded">الانسحاب من المزاد</button>
+            </div>
+        </div>
+    </div>
+
+
+    <app-lose-component *ngIf="timerEnded && !purchased"></app-lose-component>
+    <app-win-component *ngIf="timerEnded && purchased"></app-win-component >
+
+
+    <!-- Detail Cards -->
+    <div class="info-card" *ngIf="!purchased">
+        <h3>مزايد اخر قدم عرض</h3>
+    </div>
+
+
+    <div class="info-card" *ngIf="!timerEnded">
+        <h3>{{ timerDisplay }}</h3>
+    </div>
+
+    <div class="info-card" *ngIf="!timerEnded">
+        <div class="row-between">
+            <img src="https://img.icons8.com/?size=100&id=3734&format=png" class="icon" />
+            <h3>المشاركين بالمزاد</h3>
+            <p>28 مشارك</p>
+        </div>
+    </div>
+
+    <!-- Two-column card -->
+    <div class="card-row" >
+        <div class="info-card">
+            <div class="row-between">
+                <img src="https://img.icons8.com/?size=128&id=FdBhIwKlkVGc&format=png" class="icon" />
+                <h3>اخر مزايدة (اليوم) </h3>
+            </div>
+            <h3 class="price">{{ maxPrice }}</h3>
+        </div>
+
+        <div class="info-card">
+            <div class="row-between">
+                <img src="https://img.icons8.com/?size=100&id=RptFK2Uwy98r&format=png" class="icon" />
+                <h3>مزايدتك الاخيرة </h3>
+            </div>
+            <h3 class="price">{{ userBid }}</h3>
+        </div>
+    </div>
+
+    <div *ngIf="!timerEnded">
+        <!-- Quantity Control -->
+        <div class="info-card">
+            <div class="row-center quantity-row">
+                <button class="quantity-btn" (click)="decrease()">-</button>
+                <h3 class="quantity">{{ quantity }}</h3>
+                <button class="quantity-btn" (click)="increase()">+</button>
+            </div>
+        </div>
+
+        <div class="action-button-wrapper">
+            <button class="purchase-button" (click)="onShowDialog()">المزايدة</button>
+        </div>
+
+        <!-- Confirmation Dialog -->
+        <div class="dialog-backdrop" *ngIf="showDialog">
+            <div class="dialog-box">
+                <img src="https://img.icons8.com/?size=100&id=2112&format=png" class="dialog-icon" />
+                <h3>تأكيد المزايدة</h3>
+                <p>هل أنت متأكد؟</p>
+                <p>{{ quantity }} ريال</p>
+
+                <div class="dialog-buttons">
+                    <button class="confirm-btn" (click)="confirmPurchase()">تأكيد</button>
+                    <button class="cancel-btn" (click)="cancelDialog()">إلغاء</button>
+                </div>
+
+                <div class="dialog-checkbox">
+                    <input type="checkbox" id="no-show-again" [(ngModel)]="doNotShowAgain" />
+                    <label for="no-show-again">عدم إظهار الرسالة مرة أخرى</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Alert -->
+        <div class="alert" *ngIf="purchaseMessage"
+            [ngClass]="{ 'success': isPurchaseSuccess, 'error': !isPurchaseSuccess }">
+            {{ purchaseMessage }}
+        </div>
+
+        <!-- Details Section -->
+        <app-detail-component></app-detail-component>
+    </div>
+</div>
