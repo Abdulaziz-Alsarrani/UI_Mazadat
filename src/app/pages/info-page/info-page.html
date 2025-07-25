@@ -12,7 +12,7 @@
 
 
     <app-lose-component *ngIf="timerEnded && !purchased"></app-lose-component>
-    <app-win-component *ngIf="timerEnded && purchased"></app-win-component >
+    <app-win-component *ngIf="timerEnded && purchased"></app-win-component>
 
 
     <!-- Detail Cards -->
@@ -34,7 +34,7 @@
     </div>
 
     <!-- Two-column card -->
-    <div class="card-row" >
+    <div class="card-row">
         <div class="info-card">
             <div class="row-between">
                 <img src="https://img.icons8.com/?size=128&id=FdBhIwKlkVGc&format=png" class="icon" />
@@ -87,10 +87,12 @@
         </div>
 
         <!-- Feedback Alert -->
-        <div class="alert" *ngIf="purchaseMessage"
+        <div *ngIf="purchaseMessage" class="custom-toast"
             [ngClass]="{ 'success': isPurchaseSuccess, 'error': !isPurchaseSuccess }">
             {{ purchaseMessage }}
         </div>
+
+
 
         <!-- Details Section -->
         <app-detail-component></app-detail-component>

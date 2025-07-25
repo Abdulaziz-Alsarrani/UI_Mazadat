@@ -56,3 +56,44 @@
 img {
   width: 20px;
 }
+
+.hamburger-btn {
+  display: none; /* hidden on desktop */
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  margin-left: 16px;
+  z-index: 1100;
+}
+
+@media (max-width: 1000px) {
+  .hamburger-btn {
+    display: block; /* visible on mobile */
+  }
+}
+
+@media (max-width: 350px) {
+  .app-header {
+    padding: 4px 8px; 
+    height: 50px;   
+  }
+
+  .header-right {
+    gap: 6px;       
+  }
+
+  .header-icon {
+    width: 20px;    
+    height: 20px;
+  }
+
+  .text-wrapper {
+    font-size: 12px; 
+  }
+
+  .hamburger-btn {
+    font-size: 20px; 
+  }
+}

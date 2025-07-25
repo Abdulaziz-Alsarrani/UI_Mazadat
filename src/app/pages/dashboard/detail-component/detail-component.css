@@ -194,3 +194,91 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* Tablet*/
+@media (max-width: 768px) {
+  .page {
+    padding: 16px;
+  }
+
+  .info-grid {
+    gap: 12px;
+  }
+
+  .info-grid .info-card {
+    flex: 0 0 calc(50% - 6px); 
+  }
+
+  .info-card h3 {
+    font-size: 14px;
+  }
+
+  .info-card p {
+    font-size: 12px;
+  }
+
+  .stats-row {
+    gap: 12px;
+    overflow-x: auto;
+  }
+
+  .stat-card {
+    flex: 0 0 130px;
+    min-width: 130px;
+    padding: 10px;
+  }
+
+  .base-table thead th.table-heading {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .base-table th,
+  .base-table td {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .card-button {
+    padding: 6px 18px;
+    font-size: 13px;
+  }
+}
+
+
+
+/* Very Small Screens */
+@media (max-width: 480px) {
+  .page {
+    padding: 4px;
+  }
+
+  .info-card h3 {
+    font-size: 8px;
+  }
+
+  .info-card p {
+    font-size: 8px;
+  }
+
+  .stat-card {
+    flex: 0 0 90px;
+    min-width: 90px;
+    font-size: 12px;
+  }
+
+  .base-table thead th.table-heading {
+    font-size: 8px;
+  }
+
+  .base-table th,
+  .base-table td {
+    font-size: 8px;
+    padding: 4px;
+  }
+
+  .card-button {
+    padding: 4px;
+    font-size: 7px;
+  }
+}

@@ -5,7 +5,8 @@
     </div>
 
     <div class="banner">
-        <img src="https://www.wsupercars.com/wallpapers-regular/Aston-Martin/2026-Aston-Martin-Vantage-S-001-2160.jpg" alt="Dashboard Banner" />
+        <img src="https://www.wsupercars.com/wallpapers-regular/Aston-Martin/2026-Aston-Martin-Vantage-S-001-2160.jpg"
+            alt="Dashboard Banner" />
     </div>
 
     <!-- Stats Row -->
@@ -37,7 +38,7 @@
             <img src="https://img.icons8.com/?size=60&id=RhkKQFp4TrwF&format=png" class="card-icon" />
             <div class="card-info">
                 <h3>4 مركبات بانتظار الدفع</h3>
-                <p >نحن في انتظار عملية الدفع</p>
+                <p>نحن في انتظار عملية الدفع</p>
             </div>
             <p class="task-action">اتخاذ اجراء</p>
         </div>
@@ -48,7 +49,7 @@
                 <h3>4 مستحقات بانتظار الدفع</h3>
                 <p>مستندات تحتاج الى مراجعتك</p>
             </div>
-           <p class="task-action">اتخاذ اجراء</p>
+            <p class="task-action">اتخاذ اجراء</p>
         </div>
 
         <div class="task-card">
@@ -57,7 +58,7 @@
                 <h3>4 مركبات بانتظار نقل الملكية</h3>
                 <p>مستندات تحتاج الى مراجعتك</p>
             </div>
-           <p class="task-action">اتخاذ اجراء</p>
+            <p class="task-action">اتخاذ اجراء</p>
         </div>
     </div>
 
@@ -68,11 +69,10 @@
 
     <!-- Tabs -->
     <div class="record-tabs">
-        <button class="tab-button" [class.active]="selectedTab === 'مستمر'"
-            (click)="selectedTab = 'مستمر'">مشارك بها</button>
-
-        <button class="tab-button" [class.active]="selectedTab === 'منتهي'"
-            (click)="selectedTab = 'منتهي'">فائز بها</button>
+        <button class="tab-button" [class.active]="selectedTab === 'مستمر'" (click)="selectedTab = 'مستمر'">مشارك
+            بها</button>
+        <button class="tab-button" [class.active]="selectedTab === 'منتهي'" (click)="selectedTab = 'منتهي'">فائز
+            بها</button>
     </div>
 
     <!-- Table -->
@@ -90,45 +90,14 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- مستمر -->
-                <tr [hidden]="selectedTab !== 'مستمر'">
-                    <td>44403442</td>
-                    <td>kg552777</td>
-                    <td>2213 ر ح س</td>
-                    <td>2025-07-1</td>
-                    <td>2025-07-12</td>
-                    <td>نشط</td>
+                <tr *ngFor="let auction of currentAuctions">
+                    <td>{{ auction.auctionNumber }}</td>
+                    <td>{{ auction.chassisNumber }}</td>
+                    <td>{{ auction.plate }}</td>
+                    <td>{{ auction.date | date:'yyyy-MM-dd' }}</td>
+                    <td>{{ auction.startDate | date:'yyyy-MM-dd' }}</td>
+                    <td>{{ auction.status }}</td>
                     <td><button class="action-btn">...</button></td>
-                </tr>
-                <tr [hidden]="selectedTab !== 'مستمر'">
-                     <td>43303442</td>
-                    <td>kg553377</td>
-                    <td>2333 ر ح س</td>
-                    <td>2025-07-1</td>
-                    <td>2025-07-12</td>
-                    <td>نشط</td>
-                    <td><button class="action-btn">...</button></td>
-                </tr>
-
-                <!-- منتهي -->
-                <tr [hidden]="selectedTab !== 'منتهي'">
-                     <td>42203442</td>
-                    <td>kg2212777</td>
-                    <td>2313 ر ح س</td>
-                    <td>2025-07-1</td>
-                    <td>2025-07-12</td>
-                    <td>نشط</td>
-                    <td><button class="action-btn">...</button></td>
-                </tr>
-                <tr [hidden]="selectedTab !== 'منتهي'">
-                     <td>44403442</td>
-                    <td>kg552777</td>
-                    <td>2213 ر ح س</td>
-                    <td>2025-07-1</td>
-                    <td>2025-07-12</td>
-                    <td>نشط</td>
-                    <td><button class="action-btn">...</button></td>
-                </tr>
             </tbody>
         </table>
     </div>

@@ -1,7 +1,9 @@
 <app-header></app-header>
+<div class="sidebar-overlay" [class.show]="sidebarOpen" (click)="closeSidebar()"></div>
 <app-side-nav></app-side-nav>
 
 <main class="main-layout">
   <router-outlet></router-outlet>
 </main>
+
 <app-bottom-nav></app-bottom-nav>

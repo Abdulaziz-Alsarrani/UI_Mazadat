@@ -216,25 +216,188 @@
   font-size: 14px;
 }
 
-/*alert */
+/*toast */
 
-.alert {
-  text-align: center;
-  margin-top: 20px;
-  font-weight: bold;
-  padding: 12px 16px;
+.custom-toast {
+  position: fixed;
+  top: 20px;
+  right: 260px;
+  z-index: 9999;
+  padding: 12px 20px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.3s forwards;
 }
 
-.alert.success {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
+.custom-toast.success {
+  background-color: #28a745; /* green */
 }
 
-.alert.error {
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
+.custom-toast.error {
+  background-color: #dc3545; /* red */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Tablet  */
+@media (max-width: 768px) {
+  .info-page {
+    padding: 16px;
+  }
+
+  .product-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .product-title {
+    font-size: 18px;
+  }
+
+  .product-meta {
+    align-items: flex-start;
+  }
+
+  .info-grid {
+    gap: 12px;
+  }
+
+  .info-grid .info-card {
+    flex: 0 0 calc(50% - 6px); 
+  }
+
+  .card-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .purchase-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .quantity-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .quantity-btn {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+
+  .quantity {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .dialog-box {
+    width: 90%;
+    padding: 16px;
+  }
+}
+
+/* Mobile  */
+@media (max-width: 480px) {
+  .info-page {
+    padding: 12px;
+  }
+
+  .banner img {
+    border-radius: 6px;
+  }
+
+  .product-title {
+    font-size: 16px;
+  }
+
+  .info-grid .info-card {
+    flex: 0 0 100%; /* Stack cards */
+  }
+
+  .info-card h3 {
+    font-size: 14px;
+  }
+
+  .info-card p {
+    font-size: 12px;
+  }
+
+  .purchase-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .custom-toast {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .confirm-btn, .cancel-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 320px) {
+  .info-page {
+    padding: 8px;
+  }
+
+  .product-title {
+    font-size: 14px;
+  }
+
+  .follow-button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .quantity-btn {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  .quantity {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 12px;
+  }
+
+  .purchase-button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .custom-toast {
+    top: 8px;
+    left: 5px;
+    right: 5px;
+    font-size: 11px;
+    padding: 6px 10px;
+  }
 }

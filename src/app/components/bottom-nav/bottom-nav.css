@@ -57,3 +57,24 @@
   cursor: pointer;
   filter: brightness(100);
 }
+
+@media (max-width: 600px) {
+  .bottom-nav-row,
+  .row-content {
+    flex-direction: column;       
+    align-items: center;
+    gap: 16px;
+  }
+
+  .row-1 {
+    height: auto;                 
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .icon-list {
+    justify-content: center;
+    flex-wrap: wrap;             
+    gap: 12px;
+  }
+}

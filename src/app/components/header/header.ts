@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Sidebar } from '../../services/sidebar';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './header.css'
 })
 export class Header {
+    constructor(private sidebarService: Sidebar) {}
 
+  toggleSidebar() {
+      console.log('Hamburger clicked');
+    this.sidebarService.toggleSidebar();
+  }
 }

@@ -190,3 +190,142 @@
   cursor: default;
 }
 
+
+/* For tablets */
+@media (max-width: 768px) {
+  .page {
+    padding: 16px;
+  }
+
+  .banner img {
+    height: 200px; 
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .product-card {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .product-img {
+    height: 150px;
+  }
+
+  .details h3 {
+    font-size: 14px;
+  }
+
+  .details p {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .stat-card {
+    width: 100px;
+    height: 100px;
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  .card-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .pagination {
+    font-size: 14px;
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .page-number,
+  .page-arrow,
+  .page-dots {
+    padding: 6px 10px;
+  }
+}
+
+/* For mobile */
+@media (max-width: 480px) {
+  .banner img {
+    height: 160px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  .stats-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .tab-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .pagination {
+    font-size: 12px;
+    gap: 6px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 320px) {
+  .page {
+    padding: 8px;
+  }
+
+  .banner img {
+    height: 120px;
+  }
+
+  .product-card {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .details h3 {
+    font-size: 12px;
+  }
+
+  .details p {
+    font-size: 10px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .tab-button {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .pagination {
+    font-size: 10px;
+    gap: 4px;
+  }
+
+  .page-number,
+  .page-arrow,
+  .page-dots {
+    padding: 4px 6px;
+  }
+}
+
+

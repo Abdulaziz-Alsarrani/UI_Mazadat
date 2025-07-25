@@ -186,3 +186,123 @@
   color: white;
   border-color: #49698C;
 }
+
+@media (max-width: 576px) {
+  .home-page {
+    padding: 16px;
+  }
+
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .page-title {
+    font-size: 18px; /* smaller title */
+  }
+
+  .create-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .banner img {
+    height: 200px; /* smaller banner */
+    border-radius: 6px;
+    margin-bottom: 16px;
+  }
+
+  .stats-row {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .stat-card {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .card-info h3 {
+    font-size: 16px;
+  }
+
+  .card-info p {
+    font-size: 12px;
+  }
+
+  .tasks-row {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .task-card {
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .orders-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .orders-bar h3 {
+    font-size: 16px;
+  }
+
+  .record-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tab-button {
+    width: 100%;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .records-table table {
+    font-size: 12px;
+  }
+
+  .records-table th,
+  .records-table td {
+    padding: 8px;
+  }
+
+  .action-btn {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+}
+
+/* small screens */
+@media (max-width: 320px) {
+  .page-title {
+    font-size: 16px;
+  }
+
+  .create-button {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .card-info h3 {
+    font-size: 14px;
+  }
+
+  .card-info p {
+    font-size: 10px;
+  }
+
+  .tab-button {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}

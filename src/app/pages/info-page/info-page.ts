@@ -6,6 +6,7 @@ import { LoseComponent } from '../dashboard/lose-component/lose-component';
 import { WinComponent } from '../dashboard/win-component/win-component';
 import { SliderComponent } from '../dashboard/slider-component/slider-component';
 
+
 @Component({
   selector: 'app-info-page',
   standalone: true,
@@ -82,14 +83,18 @@ export class InfoPage {
   }
 
   buyProduct() {
-    if (this.quantity > this.maxPrice) {
-      this.isPurchaseSuccess = true;
-      this.purchaseMessage = `✅ تمت عملية المزايدة بنجاح بمبلغ ${this.quantity} ريال`;
-      this.userBid = this.quantity;
-      this.purchased = true;
-    } else {
-      this.isPurchaseSuccess = false;
-      this.purchaseMessage = `❌ خطأ: المبلغ أقل من أعلى مزايدة (${this.maxPrice} ريال)`;
-    }
+  if (this.quantity > this.maxPrice) {
+    this.isPurchaseSuccess = true;
+    this.purchaseMessage = `✅ تمت عملية المزايدة بنجاح بمبلغ ${this.quantity} ريال`;
+    this.userBid = this.quantity;
+    this.purchased = true;
+  } else {
+    this.isPurchaseSuccess = false;
+    this.purchaseMessage = `❌ خطأ: المبلغ أقل من (${this.maxPrice} ريال)`;
   }
+
+  setTimeout(() => {
+    this.purchaseMessage = '';
+  }, 3000);
+}
 }
